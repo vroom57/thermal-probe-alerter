@@ -1,0 +1,15 @@
+# Normalize line endings to LF (MicroPython convention)
+* text=auto eol=lf
+
+# Source and text files
+*.py   text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+
+# Binary files (never convert)
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.xlsx binary
+*.stl  binary
+*.f3d  binary

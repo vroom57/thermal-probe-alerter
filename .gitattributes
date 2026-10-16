@@ -1,0 +1,3 @@
+# Normalize line endings to LF for repo-root files.
+# Each project directory has its own .gitattributes for its own files.
+* text=auto eol=lf

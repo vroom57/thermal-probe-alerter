@@ -1,0 +1,22 @@
+# Thermal Probe Alerter
+
+Hardware and firmware for a thermal probe monitor that alerts on conditions such as overheating, with visual, auditory, and internet (email) alerts.
+
+Each hardware generation is a separate, self-contained project with its own code, documentation, and license files. The projects share no files or directories.
+
+| Directory | Hardware | Platform | Status |
+| :--- | :--- | :--- | :--- |
+| [`hw-1.0-pico-python/`](hw-1.0-pico-python/) | v1.0: two Type K probes, 12 LEDs, 16x2 LCD | Raspberry Pi Pico W, MicroPython | Working |
+| [`hw-2.0-pico-c/`](hw-2.0-pico-c/) | v2.0 | Raspberry Pi Pico, C/C++ SDK | Planned |
+
+See the README in each directory for details, setup, and the safety disclaimer.
+
+## Disclaimer
+
+This is a personal hobby project, provided "as is" without warranty of any kind. Use it at your own risk. It is NOT designed, tested, or certified for life-safety or other critical uses. See each project's README for the full disclaimer.
+
+## License
+
+Copyright (C) 2026 Virgil Mehalek
+
+Licensed under the GNU General Public License v3.0 or later. See [LICENSE](LICENSE). Third-party libraries included in individual projects keep their own licenses, listed in that project's `THIRD_PARTY_LICENSES.txt`.
