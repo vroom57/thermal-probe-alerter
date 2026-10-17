@@ -37,6 +37,10 @@ from lcd_pico_i2c import I2cLcd
 
 # ******************* CONSTANTS ********************
 
+
+# **** Email: Set to 1 to prevent accidental email until 
+# **** fully configured and ready to actually use email
+
 already_sent = 1  # 1 = no email, 0 = primed to send a single email
 resend_email_interval = 120 # in seconds, and only if conditions are still there
 
