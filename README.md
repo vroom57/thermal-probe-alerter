@@ -1,8 +1,8 @@
 # Thermal Probe Alerter
 
-Hardware and firmware for a thermal probe monitor that alerts on conditions such as overheating, with visual, auditory, and internet (email) alerts.
+Hardware and firmware for a two type K (high temp) thermal probe monitor that alerts on conditions such as overheating, with visual (LED's and LCD Display), auditory (future), and internet (email) alerts.
 
-Each hardware generation is a separate, self-contained project with its own code, documentation, and license files. The projects share no files or directories.
+Each hardware generation is a separate, self-contained project with its own code, documentation, and license files. The projects share no files or directories between hardware versions.
 
 | Directory | Hardware | Platform | Status |
 | :--- | :--- | :--- | :--- |
