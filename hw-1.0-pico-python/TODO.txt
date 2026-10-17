@@ -1,0 +1,39 @@
+TODO - hw-1.0-pico-python
+=========================
+
+Future point release (e.g. v1.2). The current release is functional, so none
+of these are urgent.
+
+1. Move all configuration settings out of main.py into config.py
+   ---------------------------------------------------------------
+   Goal: an end user should only need to edit config.py to set up the unit,
+   never main.py.
+
+   a) Add an email on/off switch to config.py, for example:
+        EMAIL_ENABLED = False   # Set to True once the email settings are filled in
+      main.py should only send email when it is True, and print
+      "Email disabled in config.py" otherwise.
+
+      Why: already_sent can't disable email. Its starting value only decides
+      whether the first alert waits one resend interval. 0 sends on the
+      first "high" reading. 1 still sends after resend_email_interval, because
+      the loop re-arms it (already_sent = 0) every interval. Once EMAIL_ENABLED
+      exists, already_sent goes back to being an internal resend timer.
+
+   b) Settings currently hard-coded in main.py that belong in config.py:
+      - resend_email_interval (seconds between repeat alerts, default 120)
+      - under_val, low_val, high_val (temperature thresholds, degrees F;
+        keep the room-temperature test values as the shipped default)
+      - temp_calibration_left, temp_calibration_right (per-probe offsets)
+      - email_subject ('High Temp Alert')
+      - email body text ("Diesel Heat Alert: Virgil's Raspberry Pi Pico W")
+      - SMTP server and port ('smtp.gmail.com', 465)
+      - I2C_DISP_ADDR (LCD I2C address, 39 = 0x27)
+
+   c) Update README.txt setup notes to point only at config.py.
+
+2. Small cleanups for the same release
+   ------------------------------------
+   - Reword the "Email: Set to 1 to prevent accidental email ..." comment
+     above already_sent in main.py. 1 only delays the first alert by
+     resend_email_interval (see 1a). It goes away once 1a is done.

@@ -4,7 +4,7 @@
 - **Hardware:** Raspberry Pi Pico W (RP2040) Gen 1. Not tested with Gen 2, but "should" work.
 - **Runtime:** MicroPython (latest stable) Tested with v1.22.2
 - **Upload Method:** User manually uploads via Thonny on Windows to Pico or another means to manually upload all python files into root of pico-w.
-- **Config settings: ** For wi-fi and email passwords go in configy.py. Temp settings go into main.py towards the top.
+- **Config settings:** For wi-fi and email passwords go in config.py. Temp settings go into main.py towards the top.
 
 
 ## Coding Standards
