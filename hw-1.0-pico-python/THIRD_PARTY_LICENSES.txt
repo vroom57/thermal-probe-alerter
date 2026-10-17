@@ -2,9 +2,9 @@ THIRD-PARTY LICENSES
 ====================
 
 TempAlerter itself is licensed under the GNU GPL v3 or later (see LICENSE).
-It includes the following third-party libraries in Python_Code/, which remain
-under their original MIT licenses. Their license notices are reproduced
-below as required.
+It includes the following third-party libraries in Python_Code_Place_On_Pico/,
+which remain under their original MIT licenses. Their license notices are
+reproduced below as required.
 
 ------------------------------------------------------------------------------
 lcd_api.py

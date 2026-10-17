@@ -30,8 +30,8 @@ Setup notes:
 - The right thresholds depend on what you are measuring and when you want to
   be alerted. The commented-out values in main.py are examples only. All
   temperatures are in degrees Fahrenheit.
-- Upload all files in Python_Code/ to the root of the Pico W (e.g. with
-  Thonny). main.py runs automatically at power-up.
+- Upload all files in Python_Code_Place_On_Pico/ to the root of the Pico W
+  (e.g. with Thonny). main.py runs automatically at power-up.
 - Test_Code/ holds standalone test scripts for future hardware (DS18B20
   probes, buzzer, 5-LED top row). They are not needed on the Pico.
 
@@ -50,7 +50,8 @@ v3.0 or later. See the LICENSE file for the full text.
 
 CREDITS
 -------
-These third-party libraries in Python_Code/ are used under the MIT License.
+These third-party libraries in Python_Code_Place_On_Pico/ are used under the MIT
+License.
 Full license notices are in THIRD_PARTY_LICENSES.txt.
 
 - lcd_api.py       Dave Hylands        https://github.com/dhylands/python_lcd
