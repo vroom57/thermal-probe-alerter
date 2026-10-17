@@ -42,6 +42,9 @@ resend_email_interval = 120 # in seconds, and only if conditions are still there
 
 
 # ****************   Temp Range Values
+# All values are in degrees Fahrenheit.
+# The right values depend on what you are measuring and when you want an
+# alert, so set them for your own application. The values below are examples.
 # Example: Blue < 192, Green 192 to 230, Yellow 230 to 245, Red (high) > 250
 # Original Values
 #under_val = 192
@@ -53,7 +56,9 @@ resend_email_interval = 120 # in seconds, and only if conditions are still there
 #low_val = 227
 #high_val = 235
 
-#Test values for room temp
+# Test values (default): low enough to trigger by holding a probe between
+# your fingers, so you can verify the LEDs, LCD and email alert during setup.
+# Switch to your own operating values (such as the examples above) for real use.
 under_val = 76
 low_val = 82
 high_val = 85

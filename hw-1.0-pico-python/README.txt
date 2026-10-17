@@ -23,8 +23,13 @@ Raspberry Pi Pico W running MicroPython.
 Setup notes:
 - WiFi and email credentials go in config.py (use a Gmail app password).
   Keep real values out of anything you share.
-- Temperature range thresholds (under_val, low_val, high_val) are set near
-  the top of main.py. Check them before use; test values may be active.
+- main.py ships with room-temperature TEST thresholds (under_val, low_val,
+  high_val near the top of the file). Hold a probe between your fingers to
+  reach the "high" range and trigger the red LED and an email alert. Once
+  setup is verified, set your own operating values.
+- The right thresholds depend on what you are measuring and when you want to
+  be alerted. The commented-out values in main.py are examples only. All
+  temperatures are in degrees Fahrenheit.
 - Upload all files in Python_Code/ to the root of the Pico W (e.g. with
   Thonny). main.py runs automatically at power-up.
 - Test_Code/ holds standalone test scripts for future hardware (DS18B20
