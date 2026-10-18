@@ -30,7 +30,7 @@ of these are urgent.
       - SMTP server and port ('smtp.gmail.com', 465)
       - I2C_DISP_ADDR (LCD I2C address, 39 = 0x27)
 
-   c) Update README.txt setup notes to point only at config.py.
+   c) Update README.md setup notes to point only at config.py.
 
 2. Small cleanups for the same release
    ------------------------------------

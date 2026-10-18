@@ -1,9 +1,13 @@
-TempAlerter Type K x2 - v1.1
-Hardware v1.0 Two type K probes, 12 LED's and an LCD display.
+# TempAlerter Type K x2 - v1.1
 
+Hardware v1.0: two Type K probes, 12 LEDs, and an LCD display.
 
-WHAT IT DOES
-------------
+![hw-1.0 unit running on a battery pack, and the open enclosure showing the Pico W, two MAX6675 thermocouple boards, the LCD display board, and the LED daughter board](Pictures/HW01_a.jpg)
+
+![hw-1.0 unit in use, mounted in a window with both Type K probes connected](Pictures/HW01_b.png)
+
+## What it does
+
 TempAlerter is a two-channel high-temperature monitor and alarm built on a
 Raspberry Pi Pico W running MicroPython.
 
@@ -18,51 +22,50 @@ Raspberry Pi Pico W running MicroPython.
   down at startup.
 - Sends an email alert through Gmail (SMTP over SSL) when either probe
   reaches the "high" range. While it stays high, the alert repeats at most
-  once every resend_email_interval seconds (default 120).
+  once every `resend_email_interval` seconds (default 120).
 
-Setup notes:
-- WiFi and email credentials go in config.py (use a Gmail app password).
+## Setup notes
+
+- WiFi and email credentials go in `config.py` (use a Gmail app password).
   Keep real values out of anything you share.
-- main.py ships with room-temperature TEST thresholds (under_val, low_val,
-  high_val near the top of the file). Hold a probe between your fingers to
-  reach the "high" range and trigger the red LED and an email alert. Once
-  setup is verified, set your own operating values.
+- `main.py` ships with room-temperature **test** thresholds (`under_val`,
+  `low_val`, `high_val` near the top of the file). Hold a probe between your
+  fingers to reach the "high" range and trigger the red LED and an email
+  alert. Once setup is verified, set your own operating values.
 - The right thresholds depend on what you are measuring and when you want to
-  be alerted. The commented-out values in main.py are examples only. All
+  be alerted. The commented-out values in `main.py` are examples only. All
   temperatures are in degrees Fahrenheit.
-- Upload all files in Python_Code_Place_On_Pico/ to the root of the Pico W
-  (e.g. with Thonny). main.py runs automatically at power-up.
-- Test_Code/ holds standalone test scripts for future hardware (DS18B20
+- Upload all files in `Python_Code_Place_On_Pico/` to the root of the Pico W
+  (e.g. with Thonny). `main.py` runs automatically at power-up.
+- `Test_Code/` holds standalone test scripts for future hardware (DS18B20
   probes, buzzer, 5-LED top row). They are not needed on the Pico.
 
 Wiring, pin assignments, and planned future hardware (buzzer, DS18B20
-low-temp probes, 5-LED top row) are documented in CLAUDE.md, the schematic
-images, and parts_list.txt.
+low-temp probes, 5-LED top row) are documented in `CLAUDE.md`, the schematic
+images, and `parts_list.txt`.
 
+## License
 
-LICENSE
--------
 Copyright (C) 2026 Virgil Mehalek
 
 TempAlerter is free software, licensed under the GNU General Public License
-v3.0 or later. See the LICENSE file for the full text.
+v3.0 or later. See the [LICENSE](LICENSE) file for the full text.
 
+## Credits
 
-CREDITS
--------
-These third-party libraries in Python_Code_Place_On_Pico/ are used under the MIT
-License.
-Full license notices are in THIRD_PARTY_LICENSES.txt.
+These third-party libraries in `Python_Code_Place_On_Pico/` are used under the
+MIT License. Full license notices are in
+[THIRD_PARTY_LICENSES.txt](THIRD_PARTY_LICENSES.txt).
 
-- lcd_api.py       Dave Hylands        https://github.com/dhylands/python_lcd
-- lcd_pico_i2c.py  Tyler Peppy         https://github.com/T-622/RPI-PICO-I2C-LCD
-                   (based on Dave Hylands' python_lcd)
-- max6675.py       Ivan Sevcik         https://github.com/BetaRavener/micropython-hw-lib
-- umail.py         Shawwwn             https://github.com/shawwwn/uMail
+| File | Author | Source |
+| :--- | :--- | :--- |
+| `lcd_api.py` | Dave Hylands | https://github.com/dhylands/python_lcd |
+| `lcd_pico_i2c.py` | Tyler Peppy (based on Dave Hylands' python_lcd) | https://github.com/T-622/RPI-PICO-I2C-LCD |
+| `max6675.py` | Ivan Sevcik | https://github.com/BetaRavener/micropython-hw-lib |
+| `umail.py` | Shawwwn | https://github.com/shawwwn/uMail |
 
+## Disclaimer
 
-DISCLAIMER
-----------
 This is a personal hobby project, provided "as is" without warranty of any
 kind. Use it at your own risk.
 

@@ -19,7 +19,7 @@ See the README in each directory for details, setup, and the safety disclaimer.
 
 ## Getting started with hw-1.0
 
-`hw-1.0-pico-python/Python_Code_Place_On_Pico/main.py` ships with room-temperature **test** thresholds. Hold a probe between your fingers to reach the "high" range and trigger the red LED and an email alert, which verifies the whole setup. Then set your own operating values: the right thresholds depend on what you are measuring and when you want to be alerted. All temperatures are in degrees Fahrenheit. See [`hw-1.0-pico-python/README.txt`](hw-1.0-pico-python/README.txt) for full setup notes.
+`hw-1.0-pico-python/Python_Code_Place_On_Pico/main.py` ships with room-temperature **test** thresholds. Hold a probe between your fingers to reach the "high" range and trigger the red LED and an email alert, which verifies the whole setup. Then set your own operating values: the right thresholds depend on what you are measuring and when you want to be alerted. All temperatures are in degrees Fahrenheit. See [`hw-1.0-pico-python/README.md`](hw-1.0-pico-python/README.md) for full setup notes.
 
 ## Disclaimer
 
