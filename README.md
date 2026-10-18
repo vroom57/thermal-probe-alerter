@@ -2,6 +2,12 @@
 
 Hardware and firmware for a two type K (high temp) thermal probe monitor that alerts on conditions such as overheating, with visual (LED's and LCD Display), auditory (future), and internet (email) alerts.
 
+![hw-1.0 unit running on a battery pack, and the open enclosure showing the Pico W, two MAX6675 thermocouple boards, the LCD display board, and the LED daughter board](Pictures/HomePage_01.jpg)
+
+![hw-1.0 unit in use, mounted in a window with both Type K probes connected](Pictures/HomePage_02.png)
+
+*Pictures show the hw-1.0 hardware.*
+
 Each hardware generation is a separate, self-contained project with its own code, documentation, and license files. The projects share no files or directories between hardware versions.
 
 | Directory | Hardware | Platform | Status |
