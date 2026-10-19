@@ -1,8 +1,9 @@
 # Thermal Probe Alerter
 
-A small, do-it-yourself temperature monitor that tells you when something is too hot or too cold, even when you're not home.
+A small, do-it-yourself temperature monitor (−67 °F to 1,875 °F) that tells you when something is too hot or too cold, even when you're not home.
 
 - **What it watches:** diesel heaters, stoves, ovens, fridges, and freezers
+- **Temperature range:** −55 °C (−67 °F) to 1,024 °C (1,875 °F), depending on the probes used
 - **How it tells you:** colored lights, a buzzer, a small screen, and an email to your phone
 - **What it's built from:** a Raspberry Pi Pico W, temperature probes, and open-source code
 
