@@ -28,7 +28,9 @@ I'm heading to hw-3.0 ([`../hw-3.0-pico-c-MINI/`](../hw-3.0-pico-c-MINI/)),
 which uncomplicates everything: a single Pico, possibly a display, and a single
 high-temp and/or low-temp probe in a small box. Picos are so cheap that if I
 want 4 probes, I'll just use 4 mini boxes. I'm thinking the outer cases can
-also clip together. The limitations are an IP address for each monitor and a
+also clip together like Lego, so you can just connect each mini together with
+another mini and expand it that way.
+ The limitations are an IP address for each monitor and a
 USB cable for power. But hw-3.0 is going to be written in C, and be fast,
 reliable, and super cheap.
 
