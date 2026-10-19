@@ -24,6 +24,30 @@ Raspberry Pi Pico W running MicroPython.
   reaches the "high" range. While it stays high, the alert repeats at most
   once every `resend_email_interval` seconds (default 120).
 
+## Temperature probes
+
+hw-1.0 uses two Type K probes only. Figures below are from the chip datasheet.
+
+| | Type K + MAX6675 board |
+| :--- | :--- |
+| **Range** | 0 to +1024 °C (32 to ~1875 °F) |
+| **Accuracy** | Roughly ±2–3 °C |
+| **Resolution** | 0.25 °C |
+| **Reads below freezing?** | **No** |
+
+- **Good for:** hot things such as ovens, stoves, and diesel heater exhaust.
+- **Not for:** fridges or freezers. The MAX6675 board cannot read below 0 °C
+  (32 °F), even though a Type K thermocouple can. For Type K below freezing,
+  a MAX31855 board covers about −200 to +1350 °C.
+
+> [!IMPORTANT]
+> This is an **uncalibrated** hobby unit. The real range and accuracy depend
+> on the quality of the probes and boards you buy. Many Type K probes are only
+> rated to about 400–600 °C. Check each part's listing, and compare readings
+> against a known-good thermometer before trusting them. `main.py` has
+> per-probe offsets (`temp_calibration_left`, `temp_calibration_right`) to
+> correct each reading.
+
 ## Setup notes
 
 - WiFi and email credentials go in `config.py` (use a Gmail app password).
