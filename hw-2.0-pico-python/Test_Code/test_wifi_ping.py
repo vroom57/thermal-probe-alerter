@@ -1,4 +1,4 @@
-# TempAlerter Type K x4 - MAXI - BETA
+# TempAlerter Type K x4 - MAXI - ALPHA
 # Copyright (C) 2026 Virgil Mehalek
 # SPDX-License-Identifier: GPL-3.0-or-later
 #

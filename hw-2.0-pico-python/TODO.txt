@@ -52,5 +52,4 @@ The current code is working on hardware v2.0, so none of these are urgent.
 
 6. Documentation
    --------------
-   - Pick photos from Pictures/ to show in README.md, like hw-1.0.
    - Add 3D printer files when available.

@@ -1,9 +1,11 @@
-# TempAlerter Type K x4 - MAXI - BETA
+# TempAlerter Type K x4 - MAXI - ALPHA
 
 Hardware v2.0: four Type K probes, DS18B20 low-temp probes, a buzzer, 13 LEDs,
 and a 20x4 LCD display. It builds on hardware v1.0 (see
 [`../hw-1.0-pico-python/`](../hw-1.0-pico-python/)) but is a separate product
 with its own code.
+
+![hw-2.0 breadboard prototype: Pico W, buzzer, 13 LEDs, and four MAX6675 boards labeled TK1RIn to TK4LOut, with the DS18B20 low-temp probes and the 20x4 LCD showing live readings](Pictures/HW2.0_SW2.0_Alpha.jpg)
 
 ## What it does
 
