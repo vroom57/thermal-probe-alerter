@@ -1,6 +1,10 @@
 # Thermal Probe Alerter
 
-Hardware and firmware for Raspberry Pi Pico thermal probe monitors that alert on conditions such as overheating, with visual (LEDs and LCD display), audible (buzzer), and internet (email) alerts.
+A small, do-it-yourself temperature monitor that tells you when something is too hot or too cold, even when you're not home.
+
+- **What it watches:** diesel heaters, stoves, ovens, fridges, and freezers
+- **How it tells you:** colored lights, a buzzer, a small screen, and an email to your phone
+- **What it's built from:** a Raspberry Pi Pico W, temperature probes, and open-source code
 
 ![hw-1.0 unit running on a battery pack, and the open enclosure showing the Pico W, two MAX6675 thermocouple boards, the LCD display board, and the LED daughter board](Pictures/HomePage_01.jpg)
 
