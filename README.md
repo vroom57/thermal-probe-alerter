@@ -4,9 +4,9 @@ Hardware and firmware for Raspberry Pi Pico thermal probe monitors that alert on
 
 ![hw-1.0 unit running on a battery pack, and the open enclosure showing the Pico W, two MAX6675 thermocouple boards, the LCD display board, and the LED daughter board](Pictures/HomePage_01.jpg)
 
-![hw-1.0 unit in use, mounted in a window with both Type K probes connected](Pictures/HomePage_02.png)
+![hw-2.0 breadboard prototype: Pico W, buzzer, 13 LEDs, and four MAX6675 boards labeled TK1RIn to TK4LOut, with the DS18B20 low-temp probes and the 20x4 LCD showing live readings](Pictures/HomePage_02.jpg)
 
-*Pictures show the hw-1.0 hardware.*
+*Top: hw-1.0 hardware. Bottom: hw-2.0 breadboard prototype.*
 
 Each hardware generation is a separate, self-contained project with its own code, documentation, and license files. The projects share no files or directories between hardware versions.
 

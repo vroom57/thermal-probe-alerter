@@ -4,6 +4,8 @@
 > Code and hardware are in **Alpha**. hw-2.0 runs on a breadboard but is on
 > hold and will probably not go further.
 
+![hw-2.0 breadboard prototype: Pico W, buzzer, 13 LEDs, and four MAX6675 boards labeled TK1RIn to TK4LOut, with the DS18B20 low-temp probes and the 20x4 LCD showing live readings](Pictures/HW2.0_SW2.0_Alpha.jpg)
+
 ## Where does hw-2.0 stand?
 
 As I was building this and thinking about hardware enclosures, I realized that
@@ -20,7 +22,7 @@ runs like lightning. And with Claude Code in an Ubuntu VM, it's so easy to get
 things done.
 
 So all that said, hw-2.0 is probably dead. The code does run on the breadboard
-prototype shown below. It's here in case anyone wants to see it or take it on.
+prototype shown above. It's here in case anyone wants to see it or take it on.
 
 I'm heading to hw-3.0 ([`../hw-3.0-pico-c-MINI/`](../hw-3.0-pico-c-MINI/)),
 which uncomplicates everything: a single Pico, possibly a display, and a single
@@ -36,8 +38,6 @@ Hardware v2.0: four Type K probes, DS18B20 low-temp probes, a buzzer, 13 LEDs,
 and a 20x4 LCD display. It builds on hardware v1.0 (see
 [`../hw-1.0-pico-python/`](../hw-1.0-pico-python/)) but is a separate product
 with its own code.
-
-![hw-2.0 breadboard prototype: Pico W, buzzer, 13 LEDs, and four MAX6675 boards labeled TK1RIn to TK4LOut, with the DS18B20 low-temp probes and the 20x4 LCD showing live readings](Pictures/HW2.0_SW2.0_Alpha.jpg)
 
 ## What it does
 
