@@ -5,7 +5,7 @@ Status: in planning. No code yet.
 hw-3.0 MINI is a small, simple, single-probe monitor: one unit per thing you
 want to watch. It will be a self-contained project, built with the Raspberry
 Pi Pico C/C++ SDK. It will not share any files with `hw-1.0-pico-python/` or
-`hw-2.0-pico-python/`.
+`hw-2.0-pico-python-MAXI/`.
 
 ## Planned design
 
@@ -28,7 +28,7 @@ One MINI per appliance:
 ## Why hw-3.0?
 
 hw-2.0 grew to 8 probes, a buzzer, and more LEDs than the Pico has GPIO pins
-for. See [`../hw-2.0-pico-python/README.md`](../hw-2.0-pico-python/README.md)
+for. See [`../hw-2.0-pico-python-MAXI/README.md`](../hw-2.0-pico-python-MAXI/README.md)
 for the full story.
 
 ## License

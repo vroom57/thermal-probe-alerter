@@ -1,5 +1,5 @@
-TODO - hw-2.0-pico-python
-=========================
+TODO - hw-2.0-pico-python-MAXI
+==============================
 
 hw-2.0 is on hold at the Alpha (breadboard) stage; see README.md. The code
 runs on the breadboard prototype. These are open items for anyone who picks
