@@ -13,7 +13,7 @@ Each hardware generation is a separate, self-contained project with its own code
 | Directory | Hardware | Platform | Status |
 | :--- | :--- | :--- | :--- |
 | [`hw-1.0-pico-python/`](hw-1.0-pico-python/) | v1.0: two Type K probes, 12 LEDs, 16x2 LCD | Raspberry Pi Pico W, MicroPython | Working |
-| [`hw-2.0-pico-python/`](hw-2.0-pico-python/) | v2.0 | Raspberry Pi Pico, C/C++ SDK | Planned |
+| [`hw-2.0-pico-python/`](hw-2.0-pico-python/) | v2.0: four Type K probes, DS18B20 probes, buzzer, 13 LEDs, 20x4 LCD | Raspberry Pi Pico W, MicroPython | Working |
 
 See the README in each directory for details, setup, and the safety disclaimer.
 

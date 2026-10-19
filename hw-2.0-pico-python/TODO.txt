@@ -1,0 +1,56 @@
+TODO - hw-2.0-pico-python
+=========================
+
+The current code is working on hardware v2.0, so none of these are urgent.
+
+1. Move all configuration settings out of main.py into config.py
+   ---------------------------------------------------------------
+   Goal: an end user should only need to edit config.py to set up the unit,
+   never main.py. Settings currently hard-coded in main.py:
+   - EMAIL_ENABLED, SOUND_ENABLED, WATCHDOG_ENABLED, KEEPALIVE_ENABLED,
+     TEST_WATCHDOG
+   - resend_email_interval, MAX_TEMP_WINDOW, BEEP_DURATION,
+     KEEPALIVE_INTERVAL
+   - under_val, low_val, high_val (temperature thresholds, degrees F;
+     keep the room-temperature test values as the shipped default)
+   - temp_calibration_TempK_1..4 and temp_calibration_low1..4
+   - email_subject ('High Temp Alert') and the email body text
+   - I2C_DISP_ADDR (LCD I2C address, 39 = 0x27)
+   Then update README.md setup notes to point only at config.py.
+
+2. Handle fewer than four DS18B20 probes
+   --------------------------------------
+   LCD line 3 reads low_temps_data[0] through [3]. If fewer than four probes
+   are found at boot, main.py stops with an IndexError.
+
+3. WiFi-down indicator
+   --------------------
+   At boot, if WiFi is down, main.py sets the top red LED to 0 (off), so
+   nothing shows the failure. hw-1.0 sets it to 1. The top-right red LED
+   (GP15) is now also used by TK3, so decide which LED should show WiFi
+   down.
+
+   Top-left LEDs
+   -------------
+   Top-left Red (D1, GP11) and Yellow (D2, GP12) are wired but not used by
+   main.py yet (TK4 Left Out would mirror TK3 on the top right). main.py
+   still names GP12 gpio_LED_Blu_Top from hardware v1.0; rename it.
+
+4. Buzzer
+   -------
+   - Only TK1 (Right In) and TK2 (Left In) sound the buzzer. Add the same
+     transition beeps and red-range triple beep for TK3 (Right Out) and
+     TK4 (Left Out).
+   - Add a short beep at startup so a dead buzzer or bad wiring is noticed
+     before an alarm is needed.
+
+5. Small cleanups
+   ---------------
+   - Boot WiFi message prints "Attempt N/10" but the loop allows 15 attempts.
+   - Low-temp probe status uses the Type K thresholds (under/low/med/high).
+     Decide whether they need their own thresholds.
+
+6. Documentation
+   --------------
+   - Pick photos from Pictures/ to show in README.md, like hw-1.0.
+   - Add 3D printer files when available.

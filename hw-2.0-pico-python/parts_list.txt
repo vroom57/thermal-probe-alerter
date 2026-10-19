@@ -1,0 +1,22 @@
+PARTS LIST - Hardware v2.0
+(Resistor values are approximate, hand-tuned to each LED for relative brightness)
+
+QTY 1: Pico W - Gen 1 Raspberry Pi RP2040 Chip, WiFi Wireless Connectivity, Pico WH
+QTY 1: Display - LCD2004 20x4 LCD Module, HD44780 equivalent LCD controller (I2C)
+QTY 4: MAX6675 Type K thermocouple board
+QTY 4: Type K probes
+QTY 4: Type K probe connectors
+QTY 4: DS18B20 thermal probes
+QTY 1: R1 4.7k - DS18B20 temp probe pull-up
+QTY 1: Buzzer - 5V Active Buzzer Electronic Alarm CYT1036, Current: <25mA, Input Voltage: 4-8VDC
+QTY 1: 2N2222 NPN transistor
+QTY 1: R2 10k - buzzer, to base of 2N2222 transistor
+QTY 4: Red LED
+QTY 4: Yellow LED
+QTY 3: Green LED
+QTY 2: Blue LED
+QTY 4: R3, R7, R11, R12 - 37ohm Red LED
+QTY 4: R4, R6, R10, R13 - 68ohm Yellow LED
+QTY 3: R5, R9, R14 - 260ohm Green LED
+QTY 2: R8, R15 - 46ohm Blue LED
+Miscellaneous hardware (wire, screws, enclosure, etc.)
