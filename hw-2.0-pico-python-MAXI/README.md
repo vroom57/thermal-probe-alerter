@@ -72,6 +72,34 @@ Raspberry Pi Pico W running MicroPython.
 - Optional: a watchdog timer (`WATCHDOG_ENABLED`) and a WiFi keepalive ping
   to the gateway (`KEEPALIVE_ENABLED`) to help with mesh-network roaming.
 
+## Temperature probes
+
+Figures below are from the chip datasheets.
+
+| | DS18B20 (low-temp) | Type K + MAX6675 board (high-temp) |
+| :--- | :--- | :--- |
+| **Range** | −55 to +125 °C (−67 to +257 °F) | 0 to +1024 °C (32 to ~1875 °F) |
+| **Accuracy** | ±0.5 °C (±0.9 °F) from −10 to +85 °C, ±2 °C outside that | Roughly ±2–3 °C |
+| **Resolution** | Up to 0.0625 °C | 0.25 °C |
+| **Reads below freezing?** | Yes | **No** |
+
+- **Fridges and freezers:** use the DS18B20. A freezer at about −18 °C
+  (0 °F) is well within its range.
+- **Ovens and diesel heater exhaust:** use the Type K. Ovens reach about
+  260 °C (500 °F), past the DS18B20's 125 °C limit.
+- The MAX6675 board cannot read below 0 °C (32 °F), even though a Type K
+  thermocouple can. For Type K below freezing, a MAX31855 board covers about
+  −200 to +1350 °C.
+
+> [!IMPORTANT]
+> This is an **uncalibrated** hobby unit. The real range and accuracy depend
+> on the quality of the probes and boards you buy. Cheap waterproof DS18B20
+> probes often have cable jackets rated well below 125 °C, and many Type K
+> probes are only rated to about 400–600 °C. Check each part's listing, and
+> compare readings against a known-good thermometer before trusting them.
+> `main.py` has per-probe offsets (`temp_calibration_*`) to correct each
+> reading.
+
 ## Setup notes
 
 - WiFi, email, and SMTP settings go in `config.py` (use a Gmail app
