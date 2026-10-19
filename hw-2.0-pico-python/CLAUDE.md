@@ -1,5 +1,7 @@
 # Pico W MicroPython Project Rules
 
+**Status:** On hold at the Alpha (breadboard prototype) stage. The code runs on the breadboard, but the project is not under active development. New work is going to `../hw-3.0-pico-c-MINI/`.
+
 ## Environment Context
 - **Hardware:** Raspberry Pi Pico W (RP2040) Gen 1. Not tested with Gen 2, but "should" work.
 - **Runtime:** MicroPython (latest stable).

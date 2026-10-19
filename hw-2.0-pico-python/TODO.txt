@@ -1,9 +1,18 @@
 TODO - hw-2.0-pico-python
 =========================
 
-The current code is working on hardware v2.0, so none of these are urgent.
+hw-2.0 is on hold at the Alpha (breadboard) stage; see README.md. The code
+runs on the breadboard prototype. These are open items for anyone who picks
+it up.
 
-1. Move all configuration settings out of main.py into config.py
+1. GPIO limit
+   ----------
+   Almost every GPIO is in use (only GP5, GP7, and GP28 are free). More
+   LEDs (or more probes with their own LEDs) need a shift register such as
+   the SN74HC595N, an MCP23017 I2C IO expander, or a graphical display
+   (e.g. Pico Display Pack 2.8") in place of the LEDs.
+
+2. Move all configuration settings out of main.py into config.py
    ---------------------------------------------------------------
    Goal: an end user should only need to edit config.py to set up the unit,
    never main.py. Settings currently hard-coded in main.py:
@@ -18,12 +27,12 @@ The current code is working on hardware v2.0, so none of these are urgent.
    - I2C_DISP_ADDR (LCD I2C address, 39 = 0x27)
    Then update README.md setup notes to point only at config.py.
 
-2. Handle fewer than four DS18B20 probes
+3. Handle fewer than four DS18B20 probes
    --------------------------------------
    LCD line 3 reads low_temps_data[0] through [3]. If fewer than four probes
    are found at boot, main.py stops with an IndexError.
 
-3. WiFi-down indicator
+4. WiFi-down indicator
    --------------------
    At boot, if WiFi is down, main.py sets the top red LED to 0 (off), so
    nothing shows the failure. hw-1.0 sets it to 1. The top-right red LED
@@ -36,7 +45,7 @@ The current code is working on hardware v2.0, so none of these are urgent.
    main.py yet (TK4 Left Out would mirror TK3 on the top right). main.py
    still names GP12 gpio_LED_Blu_Top from hardware v1.0; rename it.
 
-4. Buzzer
+5. Buzzer
    -------
    - Only TK1 (Right In) and TK2 (Left In) sound the buzzer. Add the same
      transition beeps and red-range triple beep for TK3 (Right Out) and
@@ -44,12 +53,12 @@ The current code is working on hardware v2.0, so none of these are urgent.
    - Add a short beep at startup so a dead buzzer or bad wiring is noticed
      before an alarm is needed.
 
-5. Small cleanups
+6. Small cleanups
    ---------------
    - Boot WiFi message prints "Attempt N/10" but the loop allows 15 attempts.
    - Low-temp probe status uses the Type K thresholds (under/low/med/high).
      Decide whether they need their own thresholds.
 
-6. Documentation
+7. Documentation
    --------------
    - Add 3D printer files when available.

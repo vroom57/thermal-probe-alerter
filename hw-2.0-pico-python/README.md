@@ -1,5 +1,37 @@
 # TempAlerter Type K x4 - MAXI - ALPHA
 
+> [!NOTE]
+> Code and hardware are in **Alpha**. hw-2.0 runs on a breadboard but is on
+> hold and will probably not go further.
+
+## Where does hw-2.0 stand?
+
+As I was building this and thinking about hardware enclosures, I realized that
+this was getting overly complex. Never a good sign.
+
+8 temp probes, buzzers, and needing to expand the LEDs, which meant using
+either an SN74HC595N to multiplex the LEDs with limited GPIO ports, or
+something like the MCP23017 I2C IO expansion board to give me more LEDs. So
+then I went off on a side project of replacing the LEDs with a Pico Display
+Pack 2.8" LCD display, so I could really make this an amazing project. Part of
+that project was using C instead of Python. Python is handy, but it's
+interpreted on a Pico. C is compiled: you drop a binary on, and it boots and
+runs like lightning. And with Claude Code in an Ubuntu VM, it's so easy to get
+things done.
+
+So all that said, hw-2.0 is probably dead. The code does run on the breadboard
+prototype shown below. It's here in case anyone wants to see it or take it on.
+
+I'm heading to hw-3.0 ([`../hw-3.0-pico-c-MINI/`](../hw-3.0-pico-c-MINI/)),
+which uncomplicates everything: a single Pico, possibly a display, and a single
+high-temp and/or low-temp probe in a small box. Picos are so cheap that if I
+want 4 probes, I'll just use 4 mini boxes. I'm thinking the outer cases can
+also clip together. The limitations are an IP address for each monitor and a
+USB cable for power. But hw-3.0 is going to be written in C, and be fast,
+reliable, and super cheap.
+
+## Current state of hw-2.0
+
 Hardware v2.0: four Type K probes, DS18B20 low-temp probes, a buzzer, 13 LEDs,
 and a 20x4 LCD display. It builds on hardware v1.0 (see
 [`../hw-1.0-pico-python/`](../hw-1.0-pico-python/)) but is a separate product
